@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Travel Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <title>Explore Japan, Iceland, Switzerland</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
     .hero {
+      background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
       height: 100vh;
-      background-size: cover;
-      background-position: center;
       color: white;
       display: flex;
       align-items: center;
@@ -21,45 +20,110 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
     .section {
-      padding: 60px 20px;
+      padding: 80px 0;
     }
-    .section img {
+    .location-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .location-card img {
       width: 100%;
-      height: 300px;
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .location-card:hover img {
+      transform: scale(1.1);
+    }
+    .location-overlay {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      width: 100%;
+      color: white;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
   <!-- Hero Section -->
-  <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1600&q=80');">
-    <h1>My Travel to Japan, Iceland and Switzerland</h1>
-  </div>
+  <section class="hero">
+    <div class="text-center">
+      <h1 class="display-4 animate__animated animate__fadeInDown">Explore the World</h1>
+      <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Discover Japan, Iceland, and Switzerland</p>
+    </div>
+  </section>
 
   <!-- Japan -->
-  <div class="section text-center">
-    <h2>🇯🇵 Japan</h2>
-    <p>Experience the culture and beauty of Japan.</p>
-    <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1000&q=80" alt="Japan">
-  </div>
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 location-card">
+          <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1000&q=80
+" alt="Japan">
+          <div class="location-overlay">
+            <h3>Japan</h3>
+            <p>Experience the blend of tradition and technology in the Land of the Rising Sun.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <h2>Why Visit Japan?</h2>
+            <p>From the cherry blossoms in Kyoto to the bustling streets of Tokyo, Japan offers a unique cultural journey that balances modern marvels and ancient history.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Iceland -->
-  <div class="section text-center bg-light">
-    <h2>🇮🇸 Iceland</h2>
-    <p>Explore icy mountains and magical winter scenes.</p>
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="Iceland">
-  </div>
+  <section class="section">
+    <div class="container">
+      <div class="row flex-row-reverse">
+        <div class="col-md-6 location-card">
+          <img src="https://icelandeasy.com/wp-content/uploads/2018/02/Iceland-mount-Kirkjufell-aurora-1800x1200.jpg" alt="Iceland">
+          <div class="location-overlay">
+            <h3>Iceland</h3>
+            <p>Land of fire and ice – where nature writes poetry with volcanoes and waterfalls.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <h2>Why Visit Iceland?</h2>
+            <p>Witness the Northern Lights, walk on glaciers, and soak in geothermal lagoons — Iceland is a natural wonderland for adventurers and photographers alike.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Switzerland -->
-  <div class="section text-center">
-    <h2>🇨🇭 Switzerland</h2>
-    <p>Discover snowy peaks and Alpine tranquility.</p>
-    <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1000&q=80" alt="Switzerland">
-  </div>
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 location-card">
+          <img src="https://ak-d.tripcdn.com/images/1mi7212000gbkyjwj2767_W_640_0_R5_Q80.jpg?proc=source/trip" alt="Switzerland">
+          <div class="location-overlay">
+            <h3>Switzerland</h3>
+            <p>Alpine beauty, precision watches, and unforgettable chocolate.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <h2>Why Visit Switzerland?</h2>
+            <p>Explore pristine lakes, charming villages, and snow-capped peaks. Switzerland is perfect for a luxurious and scenic escape.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="text-center py-4 bg-dark text-white">
-    © 2025 My Travel Site. All Rights Reserved.
+    <p>&copy; 2025 Travel World. All rights reserved.</p>
   </footer>
 
 </body>
